@@ -12,13 +12,19 @@ public class Injector {
           IllegalAccessException, NoSuchMethodException {
     Class<ConsoleHandler> consoleHandlerClass = ConsoleHandler.class;
     Field[] consoleHandlerFields = consoleHandlerClass.getDeclaredFields();
+
     for (Field field : consoleHandlerFields) {
-      if (field.getDeclaredAnnotation(Inject.class) != null
-               && field.getType().isAnnotationPresent(Dao.class)) {
+
+      if (field.getDeclaredAnnotation(Inject.class) != null && field.getType().isAnnotationPresent(Dao.class)) {
+
         field.setAccessible(true);
         Method method = DaoFactory.class.getDeclaredMethod(field.getName());
         method.setAccessible(true);
         field.set(null, method.invoke(field.getName()));
+      } else try {
+        throw new Exception("DAOOO");
+      } catch (Exception e) {
+        e.printStackTrace();
       }
     }
   }
