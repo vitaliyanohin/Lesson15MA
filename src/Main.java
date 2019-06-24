@@ -4,7 +4,6 @@ import dao.BetDaoImpl;
 import dao.UserDao;
 import dao.UserDaoImpl;
 import lib.Injector;
-
 import java.lang.reflect.InvocationTargetException;
 
 public class Main {
@@ -30,10 +29,4 @@ public class Main {
     System.out.println(userDao.getAll());
 
   }
-
-
 }
-
-
-
-
