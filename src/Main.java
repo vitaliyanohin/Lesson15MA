@@ -27,6 +27,5 @@ public class Main {
     UserDao userDao = new UserDaoImpl();
     System.out.println(betDao.getAll());
     System.out.println(userDao.getAll());
-
   }
 }
