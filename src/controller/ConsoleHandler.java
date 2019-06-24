@@ -8,7 +8,6 @@ import model.User;
 import java.util.Scanner;
 
 public class ConsoleHandler {
-
   @Inject
   private static BetDao betDao;
   @Inject
@@ -53,4 +52,3 @@ public class ConsoleHandler {
     }
   }
 }
-

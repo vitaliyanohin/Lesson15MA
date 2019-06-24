@@ -6,7 +6,6 @@ import dao.UserDao;
 import dao.UserDaoImpl;
 
 public class DaoFactory {
-
   private static BetDao instance;
   private static UserDao userInstance;
 

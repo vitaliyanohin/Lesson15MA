@@ -14,7 +14,7 @@ public class Injector {
     Field[] consoleHandlerFields = consoleHandlerClass.getDeclaredFields();
     for (Field field : consoleHandlerFields) {
       if (field.getDeclaredAnnotation(Inject.class) != null
-              && field.getType().isAnnotationPresent(Dao.class)) {
+               && field.getType().isAnnotationPresent(Dao.class)) {
         field.setAccessible(true);
         Method method = DaoFactory.class.getDeclaredMethod(field.getName());
         method.setAccessible(true);

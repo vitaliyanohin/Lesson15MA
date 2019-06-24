@@ -21,7 +21,7 @@ public class Main {
     }
   }
 
-  public static void main(String[] args) throws Exception {
+  public static void main(String[] args) {
     System.out.println("[1] - Menu Bet \n[2] - Menu User \n[0] - Exit \n");
     ConsoleHandler.handle();
     BetDao betDao = new BetDaoImpl();
