@@ -2,7 +2,6 @@ package db;
 
 import model.Bet;
 import model.User;
-
 import java.util.ArrayList;
 import java.util.List;
 
