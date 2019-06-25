@@ -6,14 +6,14 @@ import dao.UserDao;
 import dao.UserDaoImpl;
 
 public class DaoFactory {
-  private static BetDao instance;
+  private static BetDao betInstance;
   private static UserDao userInstance;
 
   public static BetDao betDao() {
-    if (instance == null) {
-      instance = new BetDaoImpl();
+    if (betInstance == null) {
+      betInstance = new BetDaoImpl();
     }
-    return instance;
+    return betInstance;
   }
 
   public static UserDao userDao() {
