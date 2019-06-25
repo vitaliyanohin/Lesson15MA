@@ -2,7 +2,6 @@ package dao;
 
 import db.Storage;
 import model.User;
-
 import java.util.List;
 
 public class UserDaoImpl implements UserDao {
