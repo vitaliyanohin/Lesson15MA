@@ -38,7 +38,7 @@ public class Injector {
       }
       if (count != 0) {
         try {
-          throw new Exception("DAOOO");
+          throw new Exception("Something wrong! failed to set value!");
         } catch (Exception e) {
           e.printStackTrace();
         }
