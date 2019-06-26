@@ -8,8 +8,10 @@ import model.User;
 import java.util.Scanner;
 
 public class ConsoleHandler {
+
   @Inject
   private static BetDao betDao;
+
   @Inject
   private static UserDao userDao;
 
@@ -46,9 +48,9 @@ public class ConsoleHandler {
             }
         }
       }
-    } catch (Exception e) {
-      e.printStackTrace();
-      System.out.println("Данные введены некорректно");
+    } catch (Exception e) { 
+       e.printStackTrace();
+       System.out.println("Данные введены некорректно");
     }
   }
 }

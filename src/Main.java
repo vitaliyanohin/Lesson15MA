@@ -4,18 +4,19 @@ import dao.BetDaoImpl;
 import dao.UserDao;
 import dao.UserDaoImpl;
 import lib.Injector;
+import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 
 public class Main {
 
-  static {
+  static  {
     try {
       Injector.injectDependency();
-    } catch (InvocationTargetException e) {
-      e.printStackTrace();
-    } catch (IllegalAccessException e) {
-      e.printStackTrace();
-    } catch (NoSuchMethodException e) {
+    } catch (InvocationTargetException
+            | IllegalAccessException
+            | NoSuchMethodException
+            | IOException
+            | ClassNotFoundException e ) {
       e.printStackTrace();
     }
   }
